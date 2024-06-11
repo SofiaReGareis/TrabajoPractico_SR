@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombre": "Rosas",
+    "desc": "Flores para arreglo floral",
+    "precio": 2,
+    "imagen": "rosas.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Cactus",
+    "desc": "Plantas suculentas para interiores",
+    "precio": 850,
+    "imagen": "cactus.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Lavanda",
+    "desc": "Planta aromática con flores, para jardines y macetas",
+    "precio": 800,
+    "imagen": "lavanda.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Árbol de Limón",
+    "desc": "Árbol frutal de limones orgánicos",
+    "precio": 4000,
+    "imagen": "limon.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Cala",
+    "desc": "Planta de interior",
+    "precio": 1200,
+    "imagen": "cala.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Suculentas surtidas",
+    "desc": "Paquete de suculentas de diversas especies",
+    "precio": 1500,
+    "imagen": "suculentas.jpg"
+  }
+]

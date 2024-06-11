@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nombre": "Carmen",
+    "apellido": "Gareis",
+    "email": "carmengareis@email.com",
+    "password": "carmen123",
+    "es_administrador": false
+  },
+  {
+    "id": 2,
+    "nombre": "Sofia",
+    "apellido": "Re",
+    "email": "sofiare@email.com",
+    "password": "sofiadmin",
+    "es_administrador": true
+  }
+]

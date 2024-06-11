@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "id_usuario": 1,
+    "fecha": "2024-05-10",
+    "total": 2050,
+    "dirección": "Avenida Siempreviva #742",
+    "productos": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": 2,
+    "id_usuario": 2,
+    "fecha": "2024-05-18",
+    "total": 850,
+    "dirección": "Avenida 12 #456",
+    "productos": [
+      2
+    ]
+  },
+  {
+    "id": 3,
+    "id_usuario": 1,
+    "fecha": "2024-05-20",
+    "total": 5200,
+    "dirección": "Main Street #789",
+    "productos": [
+      4,
+      5
+    ]
+  },
+  {
+    "id": 4,
+    "id_usuario": -1,
+    "fecha": "2024-06-15",
+    "total": 802,
+    "dirección": "Calle Principal #123",
+    "productos": [
+      1,
+      3
+    ]
+  }
+]
