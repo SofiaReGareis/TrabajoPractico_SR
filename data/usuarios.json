@@ -12,7 +12,47 @@
     "nombre": "Sofia",
     "apellido": "Re",
     "email": "sofiare@email.com",
-    "password": "sofiadmin",
+    "password": "sofia",
+    "es_administrador": true
+  },
+  {
+    "id": 3,
+    "nombre": "Pedro",
+    "apellido": "Martínez",
+    "email": "pedrito.m@example.com",
+    "password": "pedrito123",
+    "es_administrador": false
+  },
+  {
+    "id": 4,
+    "nombre": "Ana",
+    "apellido": "López",
+    "email": "ana.l@example.com",
+    "password": "ana456",
+    "es_administrador": false
+  },
+  {
+    "id": 5,
+    "nombre": "Pablo",
+    "apellido": "García",
+    "email": "pablo.g@example.com",
+    "password": "pablo789",
+    "es_administrador": false
+  },
+  {
+    "id": 6,
+    "nombre": "Marina",
+    "apellido": "Fernández",
+    "email": "marina.f@example.com",
+    "password": "marina321",
+    "es_administrador": false
+  },
+  {
+    "id": 7,
+    "nombre": "Luis",
+    "apellido": "González",
+    "email": "luis.gonzalez@example.com",
+    "password": "luis987",
     "es_administrador": true
   }
 ]

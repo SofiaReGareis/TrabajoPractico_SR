@@ -41,5 +41,59 @@
       1,
       3
     ]
+  },
+  {
+    "id": "368821ee-6a51-4eff-bd7a-cde55808e22b",
+    "user": {
+      "nombre": "Sofia",
+      "apellido": "Re",
+      "email": "sofiare@email.com",
+      "status": true
+    },
+    "address": "sss",
+    "date": "2024-06-30",
+    "products": [
+      {
+        "id": "10",
+        "nombre": "Fresa",
+        "desc": "Planta de fresas rojas y dulces",
+        "precio": 600,
+        "quantity": 1
+      },
+      {
+        "id": "9",
+        "nombre": "Helecho",
+        "desc": "Planta de follaje verde para sombra",
+        "precio": 150,
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "id": "43d16dec-ebc0-4b2f-93f5-b44822f5c5d5",
+    "user": {
+      "nombre": "Sofia",
+      "apellido": "Re",
+      "email": "sofiare@email.com",
+      "status": true
+    },
+    "address": "sdfghjk",
+    "date": "2024-06-30",
+    "products": [
+      {
+        "id": "10",
+        "nombre": "Fresa",
+        "desc": "Planta de fresas rojas y dulces",
+        "precio": 600,
+        "quantity": 2
+      },
+      {
+        "id": "8",
+        "nombre": "Olivo",
+        "desc": "Árbol mediterráneo con aceitunas",
+        "precio": 2500,
+        "quantity": 1
+      }
+    ]
   }
 ]

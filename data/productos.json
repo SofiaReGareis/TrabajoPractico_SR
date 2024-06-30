@@ -4,41 +4,89 @@
     "nombre": "Rosas",
     "desc": "Flores para arreglo floral",
     "precio": 2,
-    "imagen": "rosas.jpg"
+    "imagen": "rosas.jpg",
+    "cantidad": 50,
+    "categoria": "Flores"
   },
   {
     "id": 2,
     "nombre": "Cactus",
     "desc": "Plantas suculentas para interiores",
     "precio": 850,
-    "imagen": "cactus.jpg"
+    "imagen": "cactus.jpg",
+    "cantidad": 30,
+    "categoria": "Plantas de Interior"
   },
   {
     "id": 3,
     "nombre": "Lavanda",
     "desc": "Planta aromática con flores, para jardines y macetas",
     "precio": 800,
-    "imagen": "lavanda.jpg"
+    "imagen": "lavanda.jpg",
+    "cantidad": 18,
+    "categoria": "Plantas de Jardín"
   },
   {
     "id": 4,
     "nombre": "Árbol de Limón",
     "desc": "Árbol frutal de limones orgánicos",
     "precio": 4000,
-    "imagen": "limon.jpg"
+    "imagen": "limon.jpg",
+    "cantidad": 10,
+    "categoria": "Árboles Frutales"
   },
   {
     "id": 5,
     "nombre": "Cala",
     "desc": "Planta de interior",
     "precio": 1200,
-    "imagen": "cala.jpg"
+    "imagen": "cala.jpg",
+    "cantidad": 15,
+    "categoria": "Plantas de Interior"
   },
   {
     "id": 6,
     "nombre": "Suculentas surtidas",
     "desc": "Paquete de suculentas de diversas especies",
     "precio": 1500,
-    "imagen": "suculentas.jpg"
+    "imagen": "suculentas.jpg",
+    "cantidad": 5,
+    "categoria": "Plantas de Interior"
+  },
+  {
+    "id": 7,
+    "nombre": "Orquídea",
+    "desc": "Elegante flor ornamental para interiores",
+    "precio": 300,
+    "imagen": "orquidea.jpg",
+    "cantidad": 25,
+    "categoria": "Flores"
+  },
+  {
+    "id": 8,
+    "nombre": "Olivo",
+    "desc": "Árbol mediterráneo con aceitunas",
+    "precio": 2500,
+    "imagen": "olivo.jpg",
+    "cantidad": 8,
+    "categoria": "Árboles Frutales"
+  },
+  {
+    "id": 9,
+    "nombre": "Helecho",
+    "desc": "Planta de follaje verde para sombra",
+    "precio": 150,
+    "imagen": "helecho.jpg",
+    "cantidad": 40,
+    "categoria": "Plantas de Interior"
+  },
+  {
+    "id": 10,
+    "nombre": "Fresa",
+    "desc": "Planta de fresas rojas y dulces",
+    "precio": 600,
+    "imagen": "fresa.jpg",
+    "cantidad": 12,
+    "categoria": "Plantas de Jardín"
   }
 ]

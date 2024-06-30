@@ -7,19 +7,25 @@ const router = Router()
 
 //console.log(userData)
 router.post('/login', (req, res) => {
-    const userName = req.body.username
+    const username = req.body.username
     const pass = req.body.pass
-    const result = userData.find(e => e.email === userName && e.password === pass)
-    try {
-        if (result) {
-            res.status(200).json(`Bienvenido, ${result.nombre}.`)
-        } else {
-            res.status(400).json(`${userName} no se encuentra.`)
+
+    const result = userData.find(e => e.nombre === username && e.password === pass)
+
+    if (result) {
+        const data = {
+            nombre: result.nombre,
+            apellido: result.apellido,
+            email: result.email,
+            status: true
         }
-    } catch (ex) {
-        res.send(500).json('Error al ingresar.')
+        console.log(data)
+        res.status(200).json(data)
+    } else {
+        res.status(400).json({ status: false })
     }
 })
+
 
 router.get('/byId/:id', (req, res) => {
     const id = parseInt(req.params.id)

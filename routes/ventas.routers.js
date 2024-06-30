@@ -2,10 +2,11 @@ import { Router } from "express"
 import { readFile, writeFile } from 'fs/promises'
 import { get_user_byId } from "../utils/usuarios.js"
 import { calcularPrecioTotal, get_product_byId } from "../utils/productos.js"
-
+import { v4 as uuidv4 } from 'uuid'
 const fileVentas = await readFile('./data/ventas.json', 'utf-8')
 const salesData = JSON.parse(fileVentas)
 const router = Router()
+
 //console.log(salesData)
 router.get('/all', (req, res) => {
 
@@ -125,4 +126,31 @@ router.post('/sales', (req, res) => {
         res.status(500).json('Error al crear la venta')
     }
 })
+
+router.post('/newSale', async (req, res) => {
+    const { user, address, date, products } = req.body;
+
+    try {
+        //id de la compra, tipo numero de factura.
+        const newSaleId = uuidv4()
+
+        const newSale = {
+            id: newSaleId,
+            user: user,
+            address: address,
+            date: date,
+            products: products,
+        };
+        if (newSale) {
+            salesData.push(newSale)
+            writeFile('./data/ventas.json', JSON.stringify(salesData, null, 2))
+            res.status(200).json(newSale)
+        } else {
+            res.status(400).json(`La venta no está completa`)
+        }
+    } catch (error) {
+        console.error('Error al crear la venta:', error);
+        res.status(500).json({ error: 'Error al crear la venta' })
+    }
+});
 export default router
