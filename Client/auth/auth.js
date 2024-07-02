@@ -13,6 +13,7 @@ const auth = async ({ name, pass }) => {
 
         if (!response.ok) {
             throw new Error("Error en la petición")
+            //no iniciar sesion, actualmente ingresa a la pagina sigueinte pero no se guarda correctamente el ss
         }
 
         const user = await response.json()

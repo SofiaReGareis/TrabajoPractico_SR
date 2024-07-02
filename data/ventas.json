@@ -95,5 +95,93 @@
         "quantity": 1
       }
     ]
+  },
+  {
+    "id": "c86cb1da-e152-48a0-b1d7-550f7d13e5aa",
+    "user": {
+      "nombre": "Sofia",
+      "apellido": "Re",
+      "email": "sofiare@email.com",
+      "status": true
+    },
+    "address": "aaaaaaaaa",
+    "date": "2024-06-30",
+    "products": [
+      {
+        "id": "2",
+        "nombre": "Cactus",
+        "desc": "Plantas suculentas para interiores",
+        "precio": 850,
+        "quantity": 1
+      },
+      {
+        "id": "10",
+        "nombre": "Fresa",
+        "desc": "Planta de fresas rojas y dulces",
+        "precio": 600,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "da4b5b1f-9704-472a-9f1d-f54c8da6f115",
+    "user": {
+      "nombre": "Sofia",
+      "apellido": "Re",
+      "email": "sofiare@email.com",
+      "status": true
+    },
+    "address": "A Storni 444",
+    "date": "2024-07-01",
+    "products": [
+      {
+        "id": "1",
+        "nombre": "Rosas",
+        "desc": "Flores para arreglo floral",
+        "precio": 2,
+        "quantity": 1
+      },
+      {
+        "id": "6",
+        "nombre": "Suculentas surtidas",
+        "desc": "Paquete de suculentas de diversas especies",
+        "precio": 1500,
+        "quantity": 1
+      },
+      {
+        "id": "10",
+        "nombre": "Fresa",
+        "desc": "Planta de fresas rojas y dulces",
+        "precio": 600,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "f89a92b5-f594-4ca8-b309-e3d63a571ad3",
+    "user": {
+      "nombre": "Ayelen",
+      "apellido": "Re",
+      "email": "a.re@email.com",
+      "status": true
+    },
+    "address": "san viente",
+    "date": "2024-07-02",
+    "products": [
+      {
+        "id": "1",
+        "nombre": "Rosas",
+        "desc": "Flores para arreglo floral",
+        "precio": 2,
+        "quantity": 2
+      },
+      {
+        "id": "2",
+        "nombre": "Cactus",
+        "desc": "Plantas suculentas para interiores",
+        "precio": 850,
+        "quantity": 1
+      }
+    ]
   }
 ]

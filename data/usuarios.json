@@ -54,5 +54,29 @@
     "email": "luis.gonzalez@example.com",
     "password": "luis987",
     "es_administrador": true
+  },
+  {
+    "id": 8,
+    "nombre": "Ayelen",
+    "apellido": "Re",
+    "email": "a.re@email.com",
+    "pass": "$2a$08$FoyHfEgpD0rITQHs/CuVuuWDTZipyARSvyoXUqntmnOH1d/fVeZMy",
+    "es_administrador": false
+  },
+  {
+    "id": 9,
+    "nombre": "Ayelen",
+    "apellido": "Re",
+    "email": "a.re@email.com",
+    "password": "$2a$08$D/sZOe1Y5emytPc943q0TeL8pzFZ9S4qex/30KtUk5mHbL80Ue8Qe",
+    "es_administrador": false
+  },
+  {
+    "id": 10,
+    "nombre": "Ayelen",
+    "apellido": "Re",
+    "email": "a.re@email.com",
+    "password": "$2a$08$vxGSrwtYceHnOKoWjviDqers/3pWtnRHKwgD8IAnWs1gFh4C2yjjy",
+    "es_administrador": false
   }
 ]

@@ -1,31 +1,67 @@
 import { Router } from "express"
 import { readFile, writeFile } from 'fs/promises'
-
+import bcrypt from 'bcryptjs'
 const fileUsuarios = await readFile('./data/usuarios.json', 'utf-8')
 const userData = JSON.parse(fileUsuarios)
 const router = Router()
 
+const loadUsers = async () => {
+    const fileProductos = await readFile('./data/productos.json', 'utf-8');
+    return JSON.parse(fileProductos)
+}
+
 //console.log(userData)
 router.post('/login', (req, res) => {
-    const username = req.body.username
-    const pass = req.body.pass
+    const username = req.body.username;
+    const pass = req.body.pass;
 
-    const result = userData.find(e => e.nombre === username && e.password === pass)
+    const user = userData.find(e => e.nombre === username)
 
-    if (result) {
-        const data = {
-            nombre: result.nombre,
-            apellido: result.apellido,
-            email: result.email,
+    try {
+        if (!user) {
+            return res.status(404).json({ status: false })
+        }
+
+        // Compara la contraseña ingresada con la contraseña almacenada hasheada
+        const passwordMatch = bcrypt.compareSync(pass, user.pass)
+
+        if (!passwordMatch) {
+            // Contraseña incorrecta
+            return res.status(401).json({ status: false })
+        }
+
+        const Data = {
+            nombre: user.nombre,
+            apellido: user.apellido,
+            email: user.email,
             status: true
         }
-        console.log(data)
-        res.status(200).json(data)
-    } else {
-        res.status(400).json({ status: false })
+
+        res.status(200).json(Data)
+    } catch (error) {
+        console.error('Error en la autenticación:', error)
+        res.status(500).send('Error en el servidor')
     }
 })
 
+router.post('/newUser', (req, res) => {
+    const { nombre, apellido, email, pass } = req.body
+    try {
+        const hashedPass = bcrypt.hashSync(pass, 8)
+
+        const id = userData.length > 0 ? userData[userData.length - 1].id + 1 : 1
+        const admin = false //esta es para seguir con el esquema de json ya creado
+
+        userData.push({ id: id, nombre, apellido, email, password: hashedPass, es_administrador: admin })
+        writeFile('./data/usuarios.json', JSON.stringify(userData, null, 2))
+
+        res.status(200).json({ status: true })
+
+    } catch (error) {
+        console.error('Error al crear un nuevo usuario:', error)
+        res.status(500).json('Error al crear un nuevo usuario.')
+    }
+})
 
 router.get('/byId/:id', (req, res) => {
     const id = parseInt(req.params.id)
