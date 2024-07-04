@@ -28,25 +28,35 @@ async function handlePurchase() {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     const user = JSON.parse(sessionStorage.getItem('user')); // Asumiendo que el usuario está almacenado en sessionStorage
 
+    const Products = cartItems.map(item => ({
+        id: item.id,
+        quantity: item.quantity
+    }))
+
+    const tUser = {
+        nombre: user.nombre,
+        apellido: user.apellido
+    }
+
     const order = {
-        user: user,
+        user: tUser,
         address: address,
         date: new Date().toISOString().split('T')[0], // Fecha actual
-        products: cartItems
+        products: Products
     };
 
     try {
-        const purchaseResponse = await makePurchase(order);
+        await makePurchase(order);
         alert('Compra realizada con éxito');
         localStorage.removeItem('cart'); // Limpiar el carrito después de la compra
-        window.location.href = '../home/index.html'; // Redirigir al inicio
+        window.location.href = '../home/index.html';
     } catch (error) {
         alert('Error al realizar la compra');
     }
 }
 
-// Añadir evento al botón de compra
-document.getElementById('buyButton').addEventListener('click', handlePurchase);
+
+document.getElementById('btnCompra').addEventListener('click', handlePurchase);
 
 // Cargar productos del carrito al cargar la página
 window.addEventListener('load', loadCartProducts);

@@ -27,21 +27,42 @@ const auth = async ({ name, pass }) => {
 }
 
 btnLogin.addEventListener('click', async (event) => {
-    event.preventDefault() // Prevenir el comportamiento por defecto del botón de submit(me daba error al iniciar el html)
+    event.preventDefault(); // Prevenir el comportamiento por defecto del botón de submit
 
     try {
-        const name = document.getElementById('txtName').value
-        const pass = document.getElementById('txtPass').value
+        const nameField = document.getElementById('txtName');
+        const passField = document.getElementById('txtPass');
 
-        if (name !== '' && pass !== '') {
-            const user = await auth({ name, pass })
-            addSession(user)
-            window.location.href = "../pages/home/"
-        } else {
-            alert('Hay campos incompletos')
+        if (!nameField || !passField) {
+            alert('Error interno: Campos de entrada no encontrados.');
+            return;
         }
+
+        const name = nameField.value.trim();
+        const pass = passField.value.trim();
+
+        if (!name || !pass) {
+            alert('Hay campos incompletos');
+            return;
+        }
+
+        const user = await auth({ name, pass });
+
+        if (!user) {
+            alert('Autenticación fallida. Por favor, verifique sus credenciales.');
+            return;
+        }
+
+        addSession(user);
+        window.location.href = "../pages/home/";
     } catch (error) {
-        console.error("Error durante la autenticación:", error)
-        alert("Hubo un error durante la autenticación. Por favor, inténtelo de nuevo.")
+        console.error("Error durante la autenticación:", error);
+
+        // Diferenciar tipos de errores si es posible
+        if (error.message.includes('NetworkError')) {
+            alert("Error de red. Por favor, verifique su conexión a Internet e inténtelo de nuevo.");
+        } else {
+            alert("Hubo un error durante la autenticación. Por favor, inténtelo de nuevo.");
+        }
     }
 })

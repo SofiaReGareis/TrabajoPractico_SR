@@ -183,5 +183,47 @@
         "quantity": 1
       }
     ]
+  },
+  {
+    "id": "c26d569f-17e0-46fb-9318-40234ca75463",
+    "user": {
+      "nombre": "Ayelen",
+      "apellido": "Re"
+    },
+    "address": "NuevaCompra 222",
+    "date": "2024-07-04",
+    "products": [
+      {
+        "id": "1",
+        "quantity": 2
+      },
+      {
+        "id": "10",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "id": "6ad6f132-7bd9-4e2e-82e7-d7120da3fa66",
+    "user": {
+      "nombre": "Ayelen",
+      "apellido": "Re"
+    },
+    "address": "A Storni 444",
+    "date": "2024-07-04",
+    "products": [
+      {
+        "id": "1",
+        "quantity": 1
+      },
+      {
+        "id": "2",
+        "quantity": 1
+      },
+      {
+        "id": "4",
+        "quantity": 1
+      }
+    ]
   }
 ]
