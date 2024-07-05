@@ -9,14 +9,14 @@ export async function makePurchase(order) {
         });
 
         if (!response.ok) {
-            const error = await response.json();
-            console.error('Error al realizar la compra:', error);
-            throw new Error('Error al realizar la compra');
+            const error = await response.json()
+            console.error('Error al realizar la compra:', error)
+            throw new Error('Error al realizar la compra')
         }
 
-        return await response.json();
+        return await response.json()
     } catch (error) {
-        console.error('Error al realizar la compra:', error);
+        console.error('Error al realizar la compra:', error)
         throw error;
     }
 }

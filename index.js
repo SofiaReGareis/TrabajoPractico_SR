@@ -1,5 +1,5 @@
 import express from 'express'
-import dotenv from 'dotenv'
+//import dotenv from 'dotenv'
 //import { readFile, writeFile } from 'fs/promises'
 import userRouter from './routes/usuarios.routes.js'
 import itemRouter from './routes/productos.routes.js'

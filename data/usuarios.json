@@ -78,5 +78,53 @@
     "email": "a.re@email.com",
     "password": "$2a$08$vxGSrwtYceHnOKoWjviDqers/3pWtnRHKwgD8IAnWs1gFh4C2yjjy",
     "es_administrador": false
+  },
+  {
+    "id": 11,
+    "nombre": "Carmen",
+    "apellido": "Gareis",
+    "email": "cgareis@email.com",
+    "password": "$2a$08$diAEXUCFiUjDKkIB9rFFgejLjBYo43EGxBUsPh81zg2IuvT3H2mTi",
+    "es_administrador": false
+  },
+  {
+    "id": 12,
+    "nombre": "Carmen",
+    "apellido": "Gareis",
+    "email": "cgareis@email.com",
+    "password": "$2a$08$2v9NZ2lJqlM88UztzWn2oOp5APMIHc23.GBd2amTCKULGWvVAw/Ym",
+    "es_administrador": false
+  },
+  {
+    "id": 13,
+    "nombre": "Priscila",
+    "apellido": "Gareis",
+    "email": "cgareis@email.com",
+    "password": "$2a$08$ydhoo8kWKB.7Gfnh4uCQT.wscR0jYHkGcCG4ebqtyujic05ciOQ1m",
+    "es_administrador": false
+  },
+  {
+    "id": 14,
+    "nombre": "Priscila",
+    "apellido": "Gareis",
+    "email": "cgareis@email.com",
+    "password": "$2a$08$zXxQsZ.e1zXiqNcGYmtIFus9hbpSbK5slX/E1tAa9wuQVDH7k1f8e",
+    "es_administrador": false
+  },
+  {
+    "id": 15,
+    "nombre": "Ignacio",
+    "apellido": "Gareis",
+    "email": "cgareis@email.com",
+    "password": "$2a$08$FtUDzxXSVSRKyHg7V9YLmutLaEDqwRssfZ0s19Zx75vjxILeAmPdi",
+    "es_administrador": false
+  },
+  {
+    "id": 16,
+    "nombre": "Mario",
+    "apellido": "Gareis",
+    "email": "cgareis@email.com",
+    "password": "$2a$08$GJ2jnwqjDmmj2RIb.FViKubT.w7QzmCempfwDdIPyZv9MaHHL058e",
+    "es_administrador": false
   }
 ]
