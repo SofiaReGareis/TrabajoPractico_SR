@@ -23,7 +23,7 @@ router.post('/login', (req, res) => {
         }
 
         // Compara la contraseña ingresada con la contraseña almacenada hasheada
-        const passwordMatch = bcrypt.compareSync(pass, user.pass)
+        const passwordMatch = bcrypt.compareSync(pass, user.password)
 
         if (!passwordMatch) {
             // Contraseña incorrecta
@@ -52,7 +52,7 @@ router.post('/newUser', (req, res) => {
         const id = userData.length > 0 ? userData[userData.length - 1].id + 1 : 1
         const admin = false //esta es para seguir con el esquema de json ya creado
 
-        userData.push({ id: id, nombre, apellido, email, password: hashedPass, es_administrador: admin })
+        userData.push({ id: id, nombre: nombre, apellido: apellido, email: email, password: hashedPass, es_administrador: admin })
         writeFile('./data/usuarios.json', JSON.stringify(userData, null, 2))
 
         res.status(200).json({ status: true })

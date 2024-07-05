@@ -17,7 +17,8 @@ router.get('/all', async (req, res) => {
             nombre: producto.nombre,
             desc: producto.desc,
             precio: producto.precio,
-            cantidad: producto.cantidad
+            cantidad: producto.cantidad,
+            imagen: producto.imagen
         }));
 
         if (productosFiltrados.length > 0) {

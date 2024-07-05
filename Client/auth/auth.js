@@ -30,39 +30,39 @@ btnLogin.addEventListener('click', async (event) => {
     event.preventDefault(); // Prevenir el comportamiento por defecto del botón de submit
 
     try {
-        const nameField = document.getElementById('txtName');
-        const passField = document.getElementById('txtPass');
+        const nameField = document.getElementById('txtName')
+        const passField = document.getElementById('txtPass')
 
         if (!nameField || !passField) {
-            alert('Error interno: Campos de entrada no encontrados.');
+            alert('Error interno: Campos de entrada no encontrados.')
             return;
         }
 
-        const name = nameField.value.trim();
-        const pass = passField.value.trim();
+        const name = nameField.value.trim()
+        const pass = passField.value.trim()
 
         if (!name || !pass) {
-            alert('Hay campos incompletos');
+            alert('Hay campos incompletos')
             return;
         }
 
-        const user = await auth({ name, pass });
+        const user = await auth({ name, pass })
 
         if (!user) {
-            alert('Autenticación fallida. Por favor, verifique sus credenciales.');
+            alert('Autenticación fallida. Por favor, verifique sus credenciales.')
             return;
         }
 
-        addSession(user);
-        window.location.href = "../pages/home/";
+        addSession(user)
+        window.location.href = "../pages/home/"
     } catch (error) {
-        console.error("Error durante la autenticación:", error);
+        console.error("Error durante la autenticación:", error)
 
-        // Diferenciar tipos de errores si es posible
+
         if (error.message.includes('NetworkError')) {
-            alert("Error de red. Por favor, verifique su conexión a Internet e inténtelo de nuevo.");
+            alert("Error de red. Por favor, verifique su conexión a Internet e inténtelo de nuevo.")
         } else {
-            alert("Hubo un error durante la autenticación. Por favor, inténtelo de nuevo.");
+            alert("Hubo un error durante la autenticación. Por favor, inténtelo de nuevo.")
         }
     }
 })
